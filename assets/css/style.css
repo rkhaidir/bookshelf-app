@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Poppins';
+}
+
+h1, h2, h3 {
+  color: #1a92ed;
+}
+
+header {
+  padding: 12px;
+  display: flex;
+  align-items: left;
+  background-color: #1a92ed;
+}
+
+header .header-title {
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside {
+  flex: 40%;
+  padding: 20px;
+}
+
+main {
+  flex: 60%;
+  padding: 20px;
+}
+
+.card {
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.card-title {
+  margin-bottom: 0.5em;
+}
+
+.card > .book-list h2 {
+  margin-bottom: unset;
+}
+
+.card > .book-list p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.shadow {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+input[type=text], input[type=number] {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input-checkbox {
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+.btn {
+  border-radius: 4px;
+  border-style: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 5px;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: .85;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: #1a92ed;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #2aad4f;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #b03333;
+  color: #fff;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px; 
+  margin-left: -125px; 
+  background-color: #12b041; 
+  color: #fff; 
+  text-align: center;
+  border-radius: 2px; 
+  padding: 16px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 100px;
+  right: 30px; 
+}
+
+#snackbar.show {
+  visibility: visible; 
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {right: 0; opacity: 0;}
+  to {right: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {right: 0; opacity: 0;}
+  to {right: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {right: 30px; opacity: 1;}
+  to {right: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {right: 30px; opacity: 1;}
+  to {right: 0; opacity: 0;}
+}
+
+@media screen and (max-width: 1024px) {
+  .container {   
+    flex-direction: column;
+  }
+}
